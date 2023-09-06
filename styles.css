@@ -1,0 +1,78 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url('bg.png') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0;
+  animation: fade-in-bg 2s forwards;
+}
+
+@keyframes fade-in-bg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fade-in 2s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.delay {
+  animation-delay: 2s; 
+}
+
+h1 {
+  font-size: 40px;
+  font-family: Poppins, sans-serif;
+  color: white;
+}
+
+p {
+  font-size: 20px;
+  font-family: Poppins, serif;
+  color: white;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  font-family: Poppins, sans-serif;
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
